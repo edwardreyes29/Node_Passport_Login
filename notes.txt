@@ -1,3 +1,5 @@
+! Continue: 18:31
+
 npm init -y // creates package.json file
 
 // install dependencies
@@ -22,3 +24,10 @@ npm init -y // creates package.json file
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
+
+
+  // To run
+  npm run dev
+
+  http://localhost:5000/users/login
+  http://localhost:5000/users/register
