@@ -1,0 +1,24 @@
+npm init -y // creates package.json file
+
+// install dependencies
+    express - framework
+    bcryptjs - encrypt password - no plain tesxt pass
+    passport - authentication
+        passport-local
+    ejs - template engine
+        express-ejs-layouts - ejs doesnt have layouts by default
+    mongoose - deals with mangoDB
+    connect-flash - flass messaging
+        express-session - connect-flash depends on this
+    npm i express bcryptjs passport ... express-session
+
+// install one dev dependency 
+    nodemon -> no need to restart server when making changes.
+
+// Create script in package.json
+
+ "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
