@@ -31,3 +31,6 @@ npm init -y // creates package.json file
 
   http://localhost:5000/users/login
   http://localhost:5000/users/register
+
+
+  partials are piece of markup that we want to put into another template file
