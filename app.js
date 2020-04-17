@@ -3,9 +3,13 @@ const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
-
+const passport = require('passport');
 
 const app = express();
+
+// Passport config
+require('./config/passport')(passport); // pass in passport ^
+
 // DB config
 const db = require('./config/keys').MongoURI;
 
@@ -18,7 +22,7 @@ mongoose.connect(db, { useNewUrlParser: true }) // returns a promise
 app.use(expressLayouts);
 app.set('view engine', 'ejs'); // set view engine to ejs
 
-// Bodyparser
+// Body parser
 app.use(express.urlencoded({ extended: false}));
 
 // Express Session
@@ -28,6 +32,10 @@ app.use(session({
     saveUninitialized: true
 }));
 
+// Passport middleware (placement important)
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Connect Flash
 app.use(flash());
 
@@ -35,6 +43,7 @@ app.use(flash());
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
     next();
 });
 
