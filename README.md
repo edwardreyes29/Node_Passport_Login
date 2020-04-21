@@ -24,10 +24,14 @@ Open "config/keys.js" and add your MongoDB URI, local or Atlas
 
 
 # Features
+Welcome page
 ![Submit Form Disabled](assets/welcome.png)
+Register Validation
+![Submit Form Disabled](assets/register-auth.png)
+Login Authorization
 ![Submit Form Disabled](assets/login-email-auth.png)
 ![Submit Form Disabled](assets/login-succesful.png)
-![Submit Form Disabled](assets/register-auth.png)
+
 
 
 
