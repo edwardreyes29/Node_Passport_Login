@@ -19,3 +19,18 @@ $ npm run dev
 ### MongoDB
 
 Open "config/keys.js" and add your MongoDB URI, local or Atlas
+![Submit Form Disabled](assets/mongodb-users.png)
+
+
+
+# Features
+![Submit Form Disabled](assets/welcome.png)
+![Submit Form Disabled](assets/login-email-auth.png)
+![Submit Form Disabled](assets/login-succesful.png)
+![Submit Form Disabled](assets/register-auth.png)
+
+
+
+
+
+
